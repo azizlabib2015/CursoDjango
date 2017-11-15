@@ -1,0 +1,21 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="panel panel-warning">
+	<div class="panel-heading">
+		<h3 class="panel-title">{{title}}</h3>
+	</div>
+	<div class="panel-body">
+		<p>Titulo: {{serie.titulo}}</p>
+        <p>Productora: {{serie.productora}}</p>
+        <p>A&ntilde;o: {{serie.fecha}}</p>
+        <p>Temporada: {{serie.temporada}}</p>
+        <p>Genero: {{serie.get_genero_display}}</p>
+        <p>Estado: {{serie.get_estado_display}}</p>
+
+	</div>
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,54 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+<div class="container">
+    <h2>{{title}}</h2>
+<form method='POST' action='' >{% csrf_token %}
+                <div class="form-group row">
+                    <label for="id_titulo" class="col-md-2 control-label">Titulo</label>
+                    <div class="col-md-10">
+                        {{ form.titulo }}
+                    </div>
+                </div>
+                    <div class="form-group row">
+                    <label for="id_productora" class="col-md-2 control-label">Productora</label>
+                    <div class="col-md-10">
+                        {{ form.productora }}
+                    </div>
+                </div>
+                    <div class="form-group row">
+                    <label for="id_fecha" class="col-md-2 control-label">a&ntilde;o</label>
+                    <div class="col-md-10">
+                        {{ form.fecha }}
+                    </div>
+                </div><div class="form-group row">
+                    <label for="id_temporada" class="col-md-2 control-label">Temporada</label>
+                    <div class="col-md-10">
+                        {{ form.temporada }}
+                    </div>
+                </div>
+                    <div class="form-group row">
+                    <label for="id_genero" class="col-md-2 control-label">Genero</label>
+                    <div class="col-md-10">
+                        {{ form.genero }}
+                    </div>
+                </div>
+               <div class="form-group row">
+                    <label for="id_estado" class="col-md-2 control-label">Estado</label>
+                    <div class="col-md-10">
+                        {{ form.estado }}
+                    </div>
+                </div>
+               <div class="form-group row">
+                   <div class="offset-sm-10 col-sm-2">
+                   <button type="submit" class="btn btn-primary">Crear Serie</button>
+                       </div>
+                   </div>
+
+
+    
+
+</form>
+</div>
+
+{% endblock %}

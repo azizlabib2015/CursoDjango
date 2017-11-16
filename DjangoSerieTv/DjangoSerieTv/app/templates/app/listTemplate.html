@@ -1,0 +1,16 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Lista de {{title}}</h1>
+<ul class="list-inline">
+    {% for v in lista %}
+  <li><a class="btn btn-warning" href="/verData/{{title}}/{{v}}" role="button">
+    {{v}}</a>
+      </li>
+    {% endfor %}
+</ul>
+
+</div>
+
+{% endblock %}

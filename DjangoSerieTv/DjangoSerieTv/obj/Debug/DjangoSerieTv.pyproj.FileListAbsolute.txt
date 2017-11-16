@@ -1,1 +1,2 @@
 D:\Desarollo de VideoJuego\DjangoSerieTv\DjangoSerieTv\obj\Debug\DjangoSerieTv.pyproj.CoreCompileInputs.cache
+F:\CursoDjango\DjangoSerieTv\DjangoSerieTv\obj\Debug\DjangoSerieTv.pyproj.CoreCompileInputs.cache

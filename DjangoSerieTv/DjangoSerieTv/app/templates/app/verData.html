@@ -1,0 +1,25 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Series de {{title}}</h1>
+<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>Titulo</th>
+                <th>Acciones</th>
+			</tr>
+		</thead>
+		<tbody>
+            {% for k,v in series %}
+			<tr>
+				<td>{{v}}</td>
+                <td><a role="button" href="{% url 'ver' id=k %}" class="btn btn-warning btn-large">Ver</a></td>
+			</tr>
+            {% endfor %}
+		</tbody>
+	</table>
+
+</div>
+
+{% endblock %}

@@ -18,6 +18,10 @@ urlpatterns = [
     # Examples:
     url(r'^$', app.views.home, name='home'),
     url(r'^ver/(?P<id>[0-9]+)$', app.views.ver, name='ver'),
+    url(r'^editar/(?P<id>[0-9]+)$', app.views.editar, name='editar'),
+    url(r'^borrar/(?P<id>[0-9]+)$', app.views.borrar, name='borrar'),
+    url(r'^listar/(?P<data>[a-zA-Z]+)$', app.views.listar, name='listar'),
+    url(r'^verData/(?P<tipo>[a-zA-Z]+)/(?P<data>[a-zA-Z0-9\s]+)$', app.views.verData, name='verData'),
     url(r'^crear$', app.views.crear, name='crear'),
     #url(r'^login/$',
     #    django.contrib.auth.views.login,

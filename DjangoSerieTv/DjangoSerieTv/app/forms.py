@@ -6,6 +6,7 @@ from django import forms
 from django.contrib.auth.forms import AuthenticationForm
 from django.utils.translation import ugettext_lazy as _
 from app.models import Serie
+from app.models import ModelFilter
 
 class BootstrapAuthenticationForm(AuthenticationForm):
     """Authentication form which uses boostrap CSS."""
@@ -54,3 +55,17 @@ class QueryForm(forms.ModelForm):
             "estado",
 
     ]
+
+class FormFilter(forms.ModelForm):
+    dataFilter=forms.CharField(max_length=20,
+                               widget=forms.TextInput({
+                                   'class': 'form-control',
+                                   'placeholder': 'Buscar una serie...'}))
+    class Meta:
+        model=ModelFilter
+        fields = [
+
+            "dataFilter"
+
+    ]
+    

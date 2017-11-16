@@ -3,16 +3,27 @@
 {% block content %}
 <div class="container">
     <div class="panel panel-warning">
+        <h1 class="text-center">{{serie.titulo}}</h1>
 	<div class="panel-heading">
-		<h3 class="panel-title">{{title}}</h3>
+		<h1 class="panel-title">{{title}}</h1>
 	</div>
 	<div class="panel-body">
-		<p>Titulo: {{serie.titulo}}</p>
-        <p>Productora: {{serie.productora}}</p>
-        <p>A&ntilde;o: {{serie.fecha}}</p>
-        <p>Temporada: {{serie.temporada}}</p>
-        <p>Genero: {{serie.get_genero_display}}</p>
-        <p>Estado: {{serie.get_estado_display}}</p>
+        <p><a href="{% url 'editar' id=serie.id %}" class="btn btn-warning btn-large">Editar</a>
+        <a onclick="return confirm('¿Deseas eliminar esta Serie?');"href="{% url 'borrar' id=serie.id %}" class="btn btn-danger btn-large">Borrar</a><p>
+        <dl class="dl-horizontal">
+            <dt>Titulo</dt>
+            <dd>{{serie.titulo}}</dd>
+            <dt>Productora</dt>
+            <dd>{{serie.productora}}</dd>
+            <dt>A&ntilde;o</dt>
+            <dd>{{serie.fecha}}</dd>
+            <dt>Temporada</dt>
+            <dd>{{serie.temporada}}</dd>
+            <dt>Genero</dt>
+            <dd>{{serie.get_genero_display}}</dd>
+            <dt>Estado</dt>
+            <dd>{{serie.get_estado_display}}</dd>
+        </dl>
 
 	</div>
 </div>

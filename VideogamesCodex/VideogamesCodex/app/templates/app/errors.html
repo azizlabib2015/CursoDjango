@@ -1,0 +1,8 @@
+﻿{% extends "app/layout.html" %}
+
+{% block  content %}
+<h2>Error 404: Element not found</h2>
+{% for error in errores %}
+ <p>{{error}}</p>
+{%endfor%}
+{% endblock %}

@@ -1,0 +1,36 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="panel panel-warning">
+        <h1 class="text-center">{{game.name}}</h1>
+	<div class="panel-heading">
+		<h1 class="panel-title">{{title}}</h1>
+	</div>
+	<div class="panel-body">
+        <p><a href="{% url 'edit' id=game.id %}" class="btn btn-warning btn-large">Edit</a>
+        <a onclick="return confirm('¿You want to delete this Game?');"href="{% url 'remove' id=game.id %}" class="btn btn-danger btn-large">Remove</a><p>
+        <dl class="dl-horizontal">
+            <dt>Name</dt>
+            <dd>{{game.name}}</dd>
+            <dt>Publisher</dt>
+            <dd>{{game.publisher}}</dd>
+            <dt>Year</dt>
+            <dd>{{game.year}}</dd>
+            <dt>Genre</dt>
+            <dd>{{game.get_genre_display}}</dd>
+            <dt>Platform</dt>
+            <dd>{{game.get_platform_display}}</dd>
+            <dt>Score</dt>
+            <dd>{{game.score}}</dd>
+            <dt>Online</dt>
+            <dd>{{game.online}}</dd>
+            <dt>PEGI</dt>
+            <dd>{{game.pegi}}</dd>
+        </dl>
+
+	</div>
+</div>
+</div>
+
+{% endblock %}

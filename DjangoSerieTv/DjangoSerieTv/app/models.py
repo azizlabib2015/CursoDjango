@@ -55,6 +55,6 @@ class Serie(models.Model):
             return series
 
 class ModelFilter(models.Model):
-    dataFilter = models.CharField(max_length=20)
-    
-    
+    dataFilter = models.CharField(max_length=20
+
+        

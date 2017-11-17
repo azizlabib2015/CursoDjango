@@ -1,0 +1,74 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+{% if divError %}
+<div class="alert alert-danger alert-dismissable">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">x</a>
+            <strong>Error!</strong> {{error}}
+          </div>
+{%endif%}
+<div class="container">
+    <h2>{{title}}</h2>
+<form method='POST' action='' >{% csrf_token %}
+                <div class="form-group row">
+                    <label for="id_name" class="col-md-2 control-label">Name</label>
+                    <div class="col-md-10">
+                        {{ form.name }}
+                    </div>
+                </div>
+                    <div class="form-group row">
+                    <label for="id_publisher" class="col-md-2 control-label">Publisher</label>
+                    <div class="col-md-10">
+                        {{ form.publisher }}
+                    </div>
+                </div>
+                    <div class="form-group row">
+                    <label for="id_year" class="col-md-2 control-label">Year</label>
+                    <div class="col-md-10">
+                        {{ form.year }}
+                    </div>
+                </div>
+                    <div class="form-group row">
+                    <label for="id_genre" class="col-md-2 control-label">Genre</label>
+                    <div class="col-md-10">
+                        {{ form.genre }}
+                    </div>
+                </div>
+               <div class="form-group row">
+                    <label for="id_platform" class="col-md-2 control-label">Platform</label>
+                    <div class="col-md-10">
+                        {{ form.platform }}
+                    </div>
+                </div>
+                   <div class="form-group row">
+                    <label for="id_score" class="col-md-2 control-label">Score</label>
+                    <div class="col-md-10">
+                        {{ form.score }}
+                    </div>
+                </div>
+                       <div class="form-group row">
+                    <label for="id_online" class="col-md-2 control-label">Online</label>
+                    <div class="col-md-10">
+                        {{ form.online }}
+                    </div>
+                </div>
+                       <div class="form-group row">
+                    <label for="id_pegi" class="col-md-2 control-label">PEGI</label>
+                    <div class="col-md-10">
+                        {{ form.pegi }}
+                    </div>
+                </div>
+
+               <div class="form-group row">
+                   <div class="offset-sm-10 col-sm-2">
+                   <button type="submit" class="btn btn-primary">Save</button>
+                       </div>
+                   </div>
+
+
+    
+
+</form>
+</div>
+
+{% endblock %}

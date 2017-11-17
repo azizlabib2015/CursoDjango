@@ -1,0 +1,27 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Lista de {{title}}</h1>
+
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th >Name</th>
+                <th>Score</th>
+                <th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+            {% for pk,name,score in games %}
+			<tr>
+				<td>{{name}}</td>
+                <td>{{score}}</td>
+                <td><a role="button" href="/show/{{pk}}" class="btn btn-success btn-large">Show</a></td>
+			</tr>
+            {% endfor %}
+		</tbody>
+	</table>
+</div>
+
+{% endblock %}
